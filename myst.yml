@@ -1,0 +1,56 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: b9f913c6-f229-4074-9913-791dabce9a09
+  title: Cours de deep learning
+  description: To understand how it works
+  keywords: 
+    - jupyter-book
+    - teaching
+    - machine learning
+
+
+  authors: 
+    - name: Mathieu Lacroix
+  # github:
+  
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: intro/intro.md
+    - file: intro/apprentissage_automatique.md
+    - title: Part 1. Classification d'images
+      children:
+      - file: book/classification/mlp.md
+      - file: book/classification/classification.md
+      - file: book/classification/MINST_classification.md
+      - file: book/classification/cnn.md
+      - file: book/classification/pytorch_cnn.md
+    - title: Partie 2. Génération d'images
+      children:
+      - file: book/generation/vae.md
+      - file: book/generation/pytorch_vae.md
+    - title: Annexes
+      children:
+      - file: book/annexes/divergenceKL.md 
+    
+  exports:
+    - format: pdf
+      template: lapreprint-typst
+      articles: intro/intro.md
+site:
+  title: Cours de Deep Learning 
+  template: book-theme
+  options:
+    hide_authors: true
+    logo_text: Cours de Deep Learning 2026/2027
+  parts:
+    primary_sidebar_footer: _static/sidebar_footer.md
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
+
+
+  exclude:
+    - _build/**
+    - .git/**
+    - .venv/**
+    - "**/.venv/**"
