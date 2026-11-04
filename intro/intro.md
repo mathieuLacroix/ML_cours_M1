@@ -8,4 +8,5 @@ Ce site correspond  au cours de la deuxième partie du module de M1 intitulé *I
 Ce cours comporte une partie pratique sous forme de TP sur Google Colab en utilisant le framework PyTorch.
 
 
+
 **Enseignant :** [Mathieu Lacroix](https://home.mis.u-picardie.fr/~lacroix/)
