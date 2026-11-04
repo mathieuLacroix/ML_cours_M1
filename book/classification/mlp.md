@@ -402,7 +402,7 @@ La fonction d'activation est la fonction ReLU. Elle est dérivable[^ReLU_derivab
 Il reste maintenant à déterminer $\frac{\partial L}{\partial h_j^t}$. Pour cela, on utilise la règle de dérivation en chaîne : 
 ```{math}
 :label: eq:backprop_mlp_hjt
-\frac{\partial L}{\partial h_j^t} = \sum_{i = 1}^{d_{t+1}} \frac{\partial L}{\partial z_j^{t+1}}\frac{\partial z_j^{t+1}}{\partial h_j^t}  = \sum_{i = 1}^{d_{t+1}} \frac{\partial L}{\partial z_j^{t+1}}w_{ji}^{t+1}
+\frac{\partial L}{\partial h_j^t} = \sum_{i = 1}^{d_{t+1}} \frac{\partial L}{\partial z_i^{t+1}}\frac{\partial z_i^{t+1}}{\partial h_j^t}  = \sum_{i = 1}^{d_{t+1}} \frac{\partial L}{\partial z_i^{t+1}}w_{ji}^{t+1}
 ```
 
 
