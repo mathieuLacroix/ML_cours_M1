@@ -31,19 +31,17 @@ jobs:
     steps:
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version: "3.14"
+          enable-cache: true
 
       - name: Install dependencies
-        run: |
-          pip install jupyter-book
-          pip install -r requirements.txt
+        run: uv sync --frozen
 
       - name: Cache execution results
         uses: actions/cache@v4
         with:
           path: _build/execute
-          key: jb-execute-${{ hashFiles('**/*.ipynb', '**/*.md', 'requirements.txt') }}
+          key: jb-execute-${{ hashFiles('**/*.ipynb', '**/*.md', 'uv.lock') }}
           restore-keys: jb-execute-
 
       - name: Build HTML (with execution)

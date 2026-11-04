@@ -136,7 +136,7 @@ _build
 __pycache__/
 
 # Python package managers
-uv.lock
+# uv.lock
 package-lock.json
 
 .DS_Store
