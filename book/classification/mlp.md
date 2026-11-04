@@ -46,7 +46,7 @@ ReLU(x) = \max\{0,x\}
 $$
 La [](#fonctionReLU) est le graphe de la fonction ReLU.
 
-```{figure} img/ShallowReLU.pdf
+```{figure} img/ShallowReLU.svg
 :label: fonctionReLU
 :width:50%
 Fonction ReLU.
@@ -145,7 +145,7 @@ Le perceptron est un **_approximateur universel_**, c'est-à-dire que n'importe 
 
 Considérons une fonction $f$ de $\mathbb{R}$ dans $\mathbb{R}$ continue et bornée sur un intervalle fini $[a,b]$. Cette fonction peut être approximée par une fonction linéaire par morceaux avec un nombre fini de morceaux pour n'importe quelle précision[^approximationFLPM]. Le nombre de morceaux augmente avec la précision de l'approximation. La [](#approximationFLPM) donne un exemple d'approximation par une fonction linéaire par morceaux.
 
-```{figure} img/ShallowApproximate.pdf
+```{figure} img/ShallowApproximate.svg
 :label: approximationFLPM
 Une fonction non linéaire (en pointillés) est approximée par une fonction linéaire par morceaux. a) Approximation par une fonction à 5 morceaux. b) Approximation par une fonction à 10 morceaux. a) Approximation par une fonction à 20 morceaux. 
 ```

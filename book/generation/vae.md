@@ -63,7 +63,7 @@ Sampler ne fait qu'ajouter du bruit et rend les images plus granuleuses.
 
 Oui. La distribution $p(x)$ est un *modèle de mélange gaussien* (Gaussian mixture model) qui permet de modéliser des distribution complexes. La [](#figGMM)[^figUnderstanding] montre un exemple (simple) de modèle de mélange gaussien.
 
-```{figure} img/VAENonLinearLVM.pdf
+```{figure} img/VAENonLinearLVM.svg
 :label:figGMM
 Modèle de mélange gaussien. Pour chaque valeur de $z$, la distribution $p(x|z)$ est une gaussienne dont la moyenne et la variance dépendent de la valeur de $z$. La distribution est illustrée pour deux valeurs de $z$ (correspondant aux figures sur les deux "tranches"). Chaque distribution a la forme d'un cercle. En marginalisant selon $z$, on obtient une distribution complexe  représentant $p(x)$.
 ```
@@ -151,7 +151,7 @@ Le premier terme de l'ELBO est un terme de **reconstruction** : il pousse le mod
 
 La [](#figArchiVAE) schématise un autoencodeur variationnel.
 
-```{figure} img/VAEArch.pdf
+```{figure} img/VAEArch.svg
 :label: figArchiVAE
 
 Architecture d'un autoencodeur variationnel.
