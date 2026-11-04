@@ -253,7 +253,7 @@ L'instruction `torch.no_grad` indique à `pytorch` qu'il n'y aura pas de rétrop
 
 Entraîner un modèle consiste à modifier itérativement les paramètres du modèle de manière à ce que la loss diminue sur le dataset d'entraînement. On utilisera pour la mise à jour des paramètres l'optimiseur ADAM avec les paramètres par défaut.
 
-Pour la loss, on utilise la log vraissemblance négative (negative log Likelihood). Pour la classification discrète, cette loss est équivalente avec l'entropie croisée. On utilisera en `pytorch` la `CrossEntropyLoss`[^urlCELoss] comme fonction de loss. Cette loss applique elle-même le softmax aux prédictions du modèle. 
+Pour la loss, on utilise la log vraisemblance négative (negative log Likelihood). Pour la classification discrète, cette loss est équivalente avec l'entropie croisée. On utilisera en `pytorch` la `CrossEntropyLoss`[^urlCELoss] comme fonction de loss. Cette loss applique elle-même le softmax aux prédictions du modèle. 
 
 [^urlCELoss]:https://docs.pytorch.org/docs/2.14/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss
 

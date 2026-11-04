@@ -168,7 +168,7 @@ ELBO(\theta, \phi) &=& \mathbb{E}_{z \sim q_\theta(z\vert x)}\left[\log \left(\f
  &=& \mathbb{E}_{z \sim q_\theta(z\vert x)}\left[\log \left(p_\phi(x)\right )\right] - KL(q_\theta(z\vert x) \parallel p(z\vert x))
 \end{array}
 $$
-Cela signifie que maximiser l'ELBO revient à maximiser la log vraissemblance de $x$ tout en minimisant la divergence  de l'approximation $q_\theta(z\vert x)$ par rapport à la distribution $p(z\vert x)$.
+Cela signifie que maximiser l'ELBO revient à maximiser la log vraisemblance de $x$ tout en minimisant la divergence  de l'approximation $q_\theta(z\vert x)$ par rapport à la distribution $p(z\vert x)$.
 ```
 
 
