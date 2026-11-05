@@ -194,16 +194,16 @@ Pour coder en pytorch le réseau de neurones de la [](#param_MLP_example), on pe
 
 ```{code} python
 class MLP(nn.Module):
-    def __init__():
+    def __init__(self):
         super().__init__() # on appelle le constructeur de la classe nn.Module
     
         self.neuralNetwork = nn.Sequential(
             nn.Linear(4,2),
-            nn.ReLu(),
+            nn.ReLU(),
             nn.Linear(2,2)
         )
 
-    def forward(x):
+    def forward(self, x):
         return self.neuralNetwork(x)
 ```
 
