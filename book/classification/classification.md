@@ -230,27 +230,33 @@ $$
 
 `````
 
-[^grad_output]: *Détails des calculs.* Soit $t$ la classe correspondant à la sortie de l'entrée $x$. On $\alpha_t = log(p_t) = s_t - \log(\sum_{c \in \mathcal{C}} e^{s_c})$. Il faut distinguer deux cas. 
+[^grad_output]: *Détails des calculs.* Soit $t$ la classe correspondant à la sortie de l'entrée $x$. On $\alpha_t = \log(p_t) = s_t - \log(\sum_{c \in \mathcal{C}} e^{s_c})$.  Il faut distinguer deux cas. 
 
     * Premier cas, on calcule $\frac{\partial L}{\partial s_t}$.
 
-        Si on note $\alpha_t = log(p_t) = s_t - \log(\sum_{c \in \mathcal{C}} e^{s_c})$, alors on a
+        Si on note $\alpha_t = \log(p_t) = s_t - \log(\sum_{c \in \mathcal{C}} e^{s_c})$, alors on a
         $$
         \begin{array}{rcl}
         \frac{\partial L}{\partial s_t} & =  & \frac{\partial L}{\partial \alpha_t}\frac{\partial \alpha_t}{\partial s_t}\\
         &&\\
-        & = & - \frac{\partial(s_t - \log(\sum_{c \in \mathcal{C}} e^{s_c}))}{\partial s_t}\\
+        & = & \frac{\partial(- s_t + \log(\sum_{c \in \mathcal{C}} e^{s_c}))}{\partial s_t}\\
          &&\\
         & = & -1 + p_t
         \end{array}
         $$
+        car, en posant $Z = \sum_{c \in \mathcal{C}} e^{s_c}$, on a : 
+        
+        \begin{equation}
+        \frac{\partial \log(Z)}{\partial s_t}  = \frac{1}{Z}\frac{\partial Z}{\partial s_t} = \frac{e^{s_t}}{Z} = p_t
+        \end{equation}
+        
 
     * Deuxième cas, on calcule $\frac{\partial L}{\partial s_j}$, $j \neq t$.
     $$
         \begin{array}{rcl}
         \frac{\partial L}{\partial s_j} & =  & \frac{\partial L}{\partial \alpha_t}\frac{\partial \alpha_t}{\partial s_j}\\
         &&\\
-        & = & - \frac{\partial(s_t - \log(\sum_{c \in \mathcal{C}} e^{s_c}))}{\partial s_j}\\
+        & = &  \frac{\partial( - s_t + \log(\sum_{c \in \mathcal{C}} e^{s_c}))}{\partial s_j}\\
          &&\\
         & = &  p_j
         \end{array}
