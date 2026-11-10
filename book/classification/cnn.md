@@ -1,9 +1,7 @@
 # Réseaux de neurones convolutifs
 
 
-```{error}
-Notation pytorch (Channels, Height, Width) ou (Batch, Channels, Height, Width)
-```
+
 
 
 Jusqu'à présent, nous n'avons vu qu'une seule architecture de réseaux de neurones : le perceptron multicouches. Pour la reconnaissance de chiffres pour le dataset MINST, c'est largement suffisant. Cependant, cette architecture a plusieurs inconvénients pour des problèmes de classification d'images plus complexes, notamment sur des images en couleur. Par exemple, il est difficile d'atteindre un bon niveau de classification pour [CIFAR-10](https://cave.cs.toronto.edu/kriz/cifar.html) ou [MINST-1D](https://github.com/greydanus/mnist1d) par exemple.
