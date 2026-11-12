@@ -232,7 +232,7 @@ Maximiser cette vraisemblance revient, à constantes près, à **minimiser l'err
 ```{important}
 La fonction de loss cherche à maximiser le terme de reconstruction tout en minimisant la régularisation KL. Comme le terme de reconstruction est équivalent (à constante près) à l'erreur quadratique moyenne, on utilisera comme loss une somme pondérée de l'erreur quadratique moyenne et de l'opposé de la divergence KL. La loss est alors égale à : 
 $$
-\|x - \mu_\phi(z)\|^2 - \beta \left(\frac{1}{2} \sum_{i=1}^\ell \left(\sigma_\theta(x)_i^2 + \mu_\theta(x)_i^2 - 1 - \log (\sigma_\theta(x)_i^2)\right)\right)
+\|x - \mu_\phi(z)\|^2 + \beta \left(\frac{1}{2} \sum_{i=1}^\ell \left(\sigma_\theta(x)_i^2 + \mu_\theta(x)_i^2 - 1 - \log (\sigma_\theta(x)_i^2)\right)\right)
 $$
 où la pondération $\beta$ est un hyperparamètre.
 ```
