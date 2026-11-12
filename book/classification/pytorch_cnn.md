@@ -62,7 +62,7 @@ des valeurs du tenseur de sortie après 3 passages de blocs.
 
 ```{code} python
 class CNN(nn.Module):
-    def __init__(self, n_classes=10):
+    def __init__(self):
         super().__init__()
         self.neuralNetwork = nn.Sequential(
             bloc(3, 8),     # Taille du tenseur de sortie : (8, 32, 32)

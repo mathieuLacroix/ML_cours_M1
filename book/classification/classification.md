@@ -199,7 +199,7 @@ De manière similaire avec $s_2$, on trouve $\frac{\partial L}{\partial W^2_{58}
 
 Par la règle de dérivation en chaîne [](#eq:backprop_mlp_hjt), on a :
 
-$$\frac{\partial L}{\partial h_1} = \frac{\partial L}{\partial s_1}\frac{\partial s_1}{\partial h_1} + \frac{\partial L}{\partial s_2}\frac{\partial s_2}{\partial h_1} = 0.3917 \times 0.9 - 0.3917 \times 1.3 \approx 0.1567$$
+$$\frac{\partial L}{\partial h_1} = \frac{\partial L}{\partial s_1}\frac{\partial s_1}{\partial h_1} + \frac{\partial L}{\partial s_2}\frac{\partial s_2}{\partial h_1} = 0.3917 \times 0.9 - 0.3917 \times 1.3 \approx -0.1567$$
 car les deux variables intermédiaires $s_1$ et $s_2$ dépendent de $h_1$. De la même manière pour, $h_2$, on a :
 $$\frac{\partial L}{\partial h_2} = \frac{\partial L}{\partial s_1}\frac{\partial s_1}{\partial h_2} + \frac{\partial L}{\partial s_2}\frac{\partial s_2}{\partial h_2} = 0.3917 \times 0.8 - 0.3917 \times 1.6 \approx -0.3134$$
 
